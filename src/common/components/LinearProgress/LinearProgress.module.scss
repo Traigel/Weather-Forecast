@@ -2,7 +2,7 @@
 
 .linearProgressBox {
   position: fixed;
-  top: -15px;
+  top: -12px;
   left: 0;
   width: 100%;
   z-index: 10;
@@ -12,7 +12,7 @@
     -moz-appearance: none;
     appearance: none;
     border: none;
-    height: 6px;
+    height: 7px;
     color: $textSecondColor;
     background-color: $textColor;
     width: 100%;
