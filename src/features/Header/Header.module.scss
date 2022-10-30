@@ -1,0 +1,36 @@
+@import "../../common/styles/Variablies";
+
+.headerComponent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include box(100%, 90px, $bgColor);
+  margin: 20px 0;
+
+  .headerLogo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .svg {
+      margin-right: 20px;
+    }
+
+    .title {
+      color: $textColor;
+    }
+  }
+
+  .navBox {
+    .link {
+      @include buttonLink(100px);
+      @include link();
+    }
+
+    .activeLink {
+      @include buttonLink(100px);
+      @include link();
+      background-color: $textColor;
+    }
+  }
+}

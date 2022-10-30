@@ -8,7 +8,12 @@ conditions.
 ### Technologies:
 
 - React
+- TypeScript
+- React-Redux
 - Redux-Toolkit
+- Redux-Thunk
+- React-Router-Dom
+- SASS
 
 ---
 

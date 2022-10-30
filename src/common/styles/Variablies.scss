@@ -1,0 +1,51 @@
+$textColor: #4793FF;
+$textSecondColor: #939CB0;
+$bgColor: #4F4F4F;
+$error: #EB3941;
+
+$white: #fff;
+
+@mixin box($width, $height, $bgColor) {
+  width: $width;
+  min-height: $height;
+  background-color: $bgColor;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 100%);
+}
+
+@mixin buttonLink($width) {
+  background-color: $textSecondColor;
+  color: $white;
+  font-size: 18px;
+  line-height: 22px;
+  width: $width;
+  padding: 5px 0;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  &:hover {
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.40);
+  }
+}
+
+@mixin link() {
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 10px;
+}
+
+@mixin text($color, $fontSize) {
+  color: $color;
+  font-size: $fontSize;
+  line-height: 30px;
+
+  &:first-letter {
+    text-transform: uppercase;
+    font-size: $fontSize;
+    font-family: sans-serif;
+  }
+}
