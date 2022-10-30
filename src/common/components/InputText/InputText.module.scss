@@ -1,0 +1,16 @@
+@import '../../styles/Variablies';
+
+.input {
+  height: 32px;
+  border-radius: 5px;
+  border: $textSecondColor 1px solid;
+  background-color: $textSecondColor;
+  color: $white;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 0 10px;
+
+  &:focus {
+    outline: none;
+  }
+}
