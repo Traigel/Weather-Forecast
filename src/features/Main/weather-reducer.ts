@@ -22,6 +22,6 @@ export const weatherReducer = slice.reducer
 export const {setCity, setCityUrl} = slice.actions
 
 // Types
-export type WeatherForecastInitialStateType = typeof initialState
+export type WeatherInitialStateType = typeof initialState
 
 export type CityType = 'Minsk' | 'Moscow' | 'Bratislava'

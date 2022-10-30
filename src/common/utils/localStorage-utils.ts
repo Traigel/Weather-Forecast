@@ -1,6 +1,6 @@
-import {WeatherForecastInitialStateType} from '../../features/Main/weather-reducer';
+import {WeatherInitialStateType} from '../../features/Main/weather-reducer';
 
-export const saveState = (weather: WeatherForecastInitialStateType) => {
+export const saveState = (weather: WeatherInitialStateType) => {
     try {
         const serializedState = JSON.stringify({weather: {city: weather.city, cityUrl: weather.cityUrl}})
         localStorage.setItem('weather', serializedState)
