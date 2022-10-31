@@ -1,0 +1,27 @@
+@import "../../styles/Variablies";
+
+.infoBox {
+    display: flex;
+    align-items: center;
+
+    .iconBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-color: $white;
+        border-radius: 50%;
+        box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+    }
+
+    .title {
+        color: $textSecondColor;
+        margin-left: 15px;
+    }
+
+    .text {
+        color: $white;
+        margin-left: 15px;
+    }
+}

@@ -1,0 +1,31 @@
+@import "../../styles/Variablies";
+
+.weatherNow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include box(300px, 200px, $bgColor);
+
+  .icon {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .temp {
+    display: inline-block;
+    position: relative;
+    color: $textColor;
+    font-weight: 500;
+    font-size: 75px;
+    line-height: 75px;
+    padding-left: 10px;
+  }
+
+  .text {
+    @include text($textSecondColor, 20px);
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../../../common/styles/Variablies";
+
+.weatherInfo {
+  @include box(380px, 200px, $bgColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

@@ -1,0 +1,13 @@
+@import "../../../../common/styles/Variablies";
+
+.citySelector {
+  @include box(170px, 200px, $bgColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .active {
+    background-color: $textColor;
+  }
+}

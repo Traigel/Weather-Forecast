@@ -21,7 +21,7 @@ export const App = () => {
                 <Routes>
                     <Route path={'/'} element={<Navigate to={'/weather'}/>}/>
                     <Route path={'/weather'} element={<Weather/>}/>
-                    <Route path={'/forecast'} element={<Forecast/>}/>
+                    <Route path={'/forecast/:city'} element={<Forecast/>}/>
                     <Route path={'/error404'} element={<Error404/>}/>
                     <Route path={'*'} element={<Navigate to={'/error404'}/>}/>
                 </Routes>

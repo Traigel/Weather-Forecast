@@ -13,6 +13,7 @@ conditions.
 - Redux-Toolkit
 - Redux-Thunk
 - React-Router-Dom
+- Axios
 - SASS
 
 ---

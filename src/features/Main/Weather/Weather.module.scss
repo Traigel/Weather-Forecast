@@ -1,0 +1,18 @@
+@import "../../../common/styles/Variablies";
+
+.weatherComponent {
+  display: flex;
+  flex-direction: column;
+
+  .weatherNowBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .weatherForecastBox {
+    @include box(100%, 100vh, $bgColor);
+    padding: 0;
+    margin: 20px 0;
+  }
+}
