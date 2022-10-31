@@ -7,8 +7,8 @@ const initialState = {
     city: 'Minsk' as CityType,
     cityUrl: '',
     location: null as CoordType | null,
-    weatherData: {} as ResponseWeatherDataType,
-    forecastData: {} as ResponseForecastDataType
+    weatherData: null as ResponseWeatherDataType | null,
+    forecastData: null as ResponseForecastDataType | null
 }
 
 const slice = createSlice({

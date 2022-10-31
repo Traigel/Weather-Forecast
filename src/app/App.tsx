@@ -7,6 +7,7 @@ import {Navigate, Route, Routes} from 'react-router-dom';
 import {Error404} from '../common/components/Error404/Error404';
 import {Forecast} from '../features/Main/Forecast/Forecast';
 import {Weather} from '../features/Main/Weather/Weather';
+import {ErrorOutput} from '../common/components/ErrorOutput/ErrorOutput';
 
 export const App = () => {
 
@@ -25,6 +26,7 @@ export const App = () => {
                     <Route path={'*'} element={<Navigate to={'/error404'}/>}/>
                 </Routes>
             </main>
+            <ErrorOutput/>
         </div>
     );
 }

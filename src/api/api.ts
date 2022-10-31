@@ -17,8 +17,7 @@ export const weatherAPI = {
     },
     getForecastWeather(params: ParamsWeatherForecastType) {
         return instance.get<ResponseForecastDataType>('forecast', {
-                params: {...params}
-            }
-        )
+            params: {...params}
+        })
     }
 }

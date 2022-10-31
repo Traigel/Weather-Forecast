@@ -11,8 +11,8 @@ beforeEach(() => {
         city: 'Minsk',
         cityUrl: '',
         location: null,
-        weatherData: {} as ResponseWeatherDataType,
-        forecastData: {} as ResponseForecastDataType
+        weatherData: null,
+        forecastData: null
     }
     newWeatherData = {
         coord: {
@@ -133,13 +133,13 @@ test('set location', () => {
 test('get city current weather', () => {
     const action = getCityCurrentWeather.fulfilled(newWeatherData, 'requestId', {q: 'Moscow'})
     const weatherReducerTest = weatherReducer(state, action)
-    expect(weatherReducerTest.weatherData.name).toBe('Moscow')
-    expect(weatherReducerTest.weatherData.id).toBe(524901)
+    expect(weatherReducerTest.weatherData?.name).toBe('Moscow')
+    expect(weatherReducerTest.weatherData?.id).toBe(524901)
 })
 
 test('get forecast weather', () => {
     const action = getCityForecastWeather.fulfilled(newForecastData, 'requestId', {q: 'Bratislava', cnt: 20})
     const weatherReducerTest = weatherReducer(state, action)
-    expect(weatherReducerTest.forecastData.city.name).toBe('Bratislava')
-    expect(weatherReducerTest.forecastData.city.id).toBe(3060972)
+    expect(weatherReducerTest.forecastData?.city.name).toBe('Bratislava')
+    expect(weatherReducerTest.forecastData?.city.id).toBe(3060972)
 })
