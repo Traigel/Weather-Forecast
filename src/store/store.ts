@@ -1,5 +1,4 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import thunk from 'redux-thunk';
 import {appReducer} from '../app/app-reducer';
 import {loadState, saveState} from "../common/utils/localStorage-utils";
 import {weatherReducer} from '../features/Main/weather-reducer';
@@ -12,8 +11,7 @@ const rootReducer = combineReducers({
 
 export const store = configureStore({
     reducer: rootReducer,
-    preloadedState: loadState(),
-    middleware: getDefaultMiddleware => getDefaultMiddleware().prepend(thunk)
+    preloadedState: loadState()
 })
 
 store.subscribe(() => {

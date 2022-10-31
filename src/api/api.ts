@@ -1,5 +1,5 @@
 import axios from "axios";
-import {ParamsWeatherForecastType, ParamsWeatherType, ResponseForecastDataType, ResponseWeatherDataType} from './types';
+import {ParamsWeatherType, ResponseForecastDataType, ResponseWeatherDataType} from './types';
 
 const instance = axios.create({
     baseURL: 'https://api.openweathermap.org/data/2.5/',
@@ -15,7 +15,7 @@ export const weatherAPI = {
             params: {...params}
         })
     },
-    getForecastWeather(params: ParamsWeatherForecastType) {
+    getForecastWeather(params: ParamsWeatherType) {
         return instance.get<ResponseForecastDataType>('forecast', {
             params: {...params}
         })

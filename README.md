@@ -11,7 +11,6 @@ conditions.
 - TypeScript
 - React-Redux
 - Redux-Toolkit
-- Redux-Thunk
 - React-Router-Dom
 - Axios
 - SASS

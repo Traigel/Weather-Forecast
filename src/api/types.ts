@@ -2,13 +2,7 @@ export type ParamsWeatherType = {
     q?: string
     lat?: number
     lon?: number
-}
-
-export type ParamsWeatherForecastType = {
-    q?: string
-    lat?: number
-    lon?: number
-    cnt: number
+    cnt?: number
 }
 
 export type ResponseWeatherDataType = {

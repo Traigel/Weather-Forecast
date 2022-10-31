@@ -20,13 +20,11 @@ export const Weather = () => {
     const weather = useAppSelector(state => state.weather)
 
     const callBackCityHandler = (city: CityType) => {
-        dispatch(getCityCurrentWeather({q: city}))
-        dispatch(getCityForecastWeather({q: city, cnt: 24}))
+        dispatch(getCityCurrentWeather({q: city, cnt: 24}))
     }
 
     useEffect(() => {
-        dispatch(getCityCurrentWeather({q: weather.city}))
-        dispatch(getCityForecastWeather({q: weather.city, cnt: 24}))
+        dispatch(getCityCurrentWeather({q: weather.city, cnt: 24}))
     }, [])
 
     useEffect(() => {
@@ -68,10 +66,6 @@ export const Weather = () => {
                 status={status}
             />
         </div>
-        <div className={styles.weatherForecastBox}>
-            {weather.forecastData?.list.map((el, index) => {
-                return <WeatherForecast key={index} list={el}/>
-            })}
-        </div>
+        <WeatherForecast lists={weather.forecastData?.list}/>
     </div>
 }

@@ -1,0 +1,35 @@
+@import "../../../styles/Variablies";
+
+.weatherForecast {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px $textSecondColor solid;
+
+  &:last-child {
+    border: none;
+  }
+
+  span {
+    margin: 0 10px;
+    color: $textSecondColor;
+    width: 150px;
+  }
+
+  .date {
+    margin-left: 20px;
+  }
+
+  .temp {
+    color: $textColor;
+    font-size: 20px;
+    width: 35px;
+  }
+
+  .description {
+    @include text($textSecondColor, 16px);
+    width: 150px;
+  }
+
+
+}
