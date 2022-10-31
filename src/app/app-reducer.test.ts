@@ -5,7 +5,7 @@ let state: AppInitialStateType
 beforeEach(() => {
     state = {
         status: 'idle',
-        error: '',
+        error: {message: ''},
         isInitialized: false
     }
 })
@@ -16,8 +16,8 @@ test('set app status', () => {
 })
 
 test('set app error', () => {
-    const appReducerTest = appReducer(state, setAppError({error: 'Error text'}))
-    expect(appReducerTest.error).toBe('Error text')
+    const appReducerTest = appReducer(state, setAppError({message: 'Error text'}))
+    expect(appReducerTest.error.message).toBe('Error text')
 })
 
 test('set app error', () => {

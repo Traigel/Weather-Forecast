@@ -8,30 +8,30 @@ import {setAppError} from '../../../app/app-reducer';
 export const ErrorOutput = () => {
 
     const dispatch = useAppDispatch()
-    const app = useAppSelector(state => state.app)
+    const error = useAppSelector(state => state.app.error)
 
     const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout>()
 
     const onClickHandler = () => {
-        dispatch(setAppError({error: ''}))
+        dispatch(setAppError({message: ''}))
         clearTimeout(timeoutId)
     }
 
     useEffect(() => {
         clearTimeout(timeoutId)
-        if (app.error) {
+        if (error.message) {
             const timeoutId = setTimeout(() => {
-                dispatch(setAppError({error: ''}))
+                dispatch(setAppError({message: ''}))
             }, 7000)
             setTimeoutId(timeoutId)
         }
-    }, [app])
+    }, [error])
 
     return <div className={styles.ErrorOutputComponent}>
-        {app.error &&
+        {error.message &&
             <div className={styles.error}>
                 <div className={styles.h3}>
-                    {app.error}
+                    {error.message}
                 </div>
                 <div
                     className={styles.cross}

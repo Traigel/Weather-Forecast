@@ -1,0 +1,26 @@
+@import "../../../common/styles/Variablies";
+
+.forecastComponent {
+  display: flex;
+  flex-direction: column;
+
+  .forecastNowBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .forecastInfo {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .weatherForecastBox {
+    @include box(100%, 100vh, $bgColor);
+    padding: 0;
+    margin: 20px 0;
+  }
+}
+

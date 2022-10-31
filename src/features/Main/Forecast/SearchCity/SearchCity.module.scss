@@ -1,0 +1,25 @@
+@import "../../../../common/styles/Variablies";
+
+.searchCityComponent {
+  @include box(575px, 70px, $bgColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+
+  .input {
+    width: 70%;
+  }
+
+  .error {
+    border: $error 1px solid;
+
+    &::placeholder {
+      color: $error;
+    }
+  }
+
+  .button {
+    width: 25%;
+  }
+}

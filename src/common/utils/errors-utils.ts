@@ -5,9 +5,9 @@ import {setAppError} from "../../app/app-reducer";
 export const errorHandlerUtil = (e: any, dispatch: Dispatch) => {
     const err = e as AxiosError<RootError>
     if (err.response) {
-        dispatch(setAppError({error: err.response.data.message}))
+        dispatch(setAppError({message: err.response.data.message}))
     } else {
-        dispatch(setAppError({error: `Native error ${err.message}`}))
+        dispatch(setAppError({message: `Native error ${err.message}`}))
     }
 }
 
