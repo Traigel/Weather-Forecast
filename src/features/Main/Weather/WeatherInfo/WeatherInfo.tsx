@@ -17,12 +17,12 @@ export const WeatherInfo = ({main, wind}: WeatherInfoPropsType) => {
         <InfoBox
             svgName={'temperature'}
             title={'Температура'}
-            text={<span>{finaleTemp}&deg; - ощущается как {tempFeelsLike}&deg;</span>}
+            text={<span>{finaleTemp}&deg;<span className={styles.spanOff}> - ощущается как {tempFeelsLike}&deg;</span></span>}
         />
         <InfoBox
             svgName={'pressure'}
             title={'Давление'}
-            text={<span>{main && main.pressure} мм ртутного столба</span>}
+            text={<span>{main && main.pressure} мм<span className={styles.spanOff}> ртутного столба</span></span>}
         />
         <InfoBox
             svgName={'humidity'}

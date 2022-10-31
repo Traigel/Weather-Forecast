@@ -7,6 +7,20 @@
   justify-content: space-evenly;
   align-items: center;
 
+  @media (max-width: 950px) {
+    width: 26%;
+  }
+
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+
+  .button {
+    @media (max-width: 650px) {
+      width: 100%;
+    }
+  }
+
   .active {
     background-color: $textColor;
   }

@@ -3,6 +3,8 @@
 .weatherForecast {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 20px 0;
   border-bottom: 1px $textSecondColor solid;
 
@@ -10,10 +12,23 @@
     border: none;
   }
 
+  @media (max-width: 950px) {
+    justify-content: center;
+  }
+
   span {
     margin: 0 10px;
     color: $textSecondColor;
-    width: 150px;
+    width: 145px;
+
+    @media (max-width: 950px) {
+      margin: 10px;
+    }
+
+    @media (max-width: 550px) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .date {
@@ -24,11 +39,21 @@
     color: $textColor;
     font-size: 20px;
     width: 35px;
+
+    @media (max-width: 550px) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .description {
     @include text($textSecondColor, 16px);
     width: 150px;
+
+    @media (max-width: 550px) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
 

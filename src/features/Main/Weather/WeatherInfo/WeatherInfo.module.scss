@@ -5,4 +5,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  @media (max-width: 950px) {
+    width: 70%;
+  }
+
+  @media (max-width: 650px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .spanOff {
+    @media (max-width: 415px) {
+      visibility: hidden;
+      position: absolute;
+    }
+  }
 }
+

@@ -19,9 +19,11 @@ export const CitySelector = ({city, callBack, status}: CitySelectorPropsType) =>
 
             const onClickButtonHandler = () => callBack(el)
 
+            const finaleClassName = `${styles.button} ${el === city ? styles.active : ''}`
+
             return <Button
                 key={index}
-                className={el === city ? styles.active : ''}
+                className={finaleClassName}
                 onClick={onClickButtonHandler}
                 disabled={status === 'loading'}
             >

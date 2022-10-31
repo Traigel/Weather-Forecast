@@ -2,4 +2,13 @@
   position: relative;
   margin: 0 auto;
   width: 900px;
+
+  @media (max-width: 950px) {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  @media (max-width: 650px) {
+    padding: 0 10px;
+  }
 }

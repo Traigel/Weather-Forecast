@@ -7,12 +7,43 @@
   justify-content: space-between;
   @include box(300px, 200px, $bgColor);
 
+  @media (max-width: 950px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+  }
+
+  @media (max-width: 400px) {
+    align-items: flex-start;
+  }
+
   .icon {
     position: absolute;
     right: 30px;
     top: 30px;
     width: 60px;
     height: 60px;
+
+    @media (max-width: 950px) {
+      right: unset;
+      left: 30px;
+      top: 25px;
+    }
+
+    @media (max-width: 650px) {
+      left: unset;
+      right: 30px;
+      top: 30px;
+    }
   }
 
   .temp {
@@ -23,6 +54,14 @@
     font-size: 75px;
     line-height: 75px;
     padding-left: 10px;
+
+    @media (max-width: 950px) {
+      padding-left: 70px;
+    }
+
+    @media (max-width: 650px) {
+      padding-left: 10px;
+    }
   }
 
   .text {

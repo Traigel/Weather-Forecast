@@ -8,12 +8,25 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     .forecastInfo {
       height: 200px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      @media (max-width: 950px) {
+        width: 100%;
+      }
+
+      @media (max-width: 650px) {
+        height: 290px;
+      }
+
+      @media (max-width: 450px) {
+        height: 345px;
+      }
     }
   }
 
