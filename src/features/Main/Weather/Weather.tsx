@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './Weather.module.scss'
 import {CitySelector} from './CitySelector/CitySelector';
-import {CityType, setCity} from '../weather-reducer';
-import { useAppSelector } from '../../../common/hooks/useAppSelector';
-import { useAppDispatch } from '../../../common/hooks/useAppDispatch';
+import {CityType} from '../weather-reducer';
+import {useAppSelector} from '../../../common/hooks/useAppSelector';
+import {useAppDispatch} from '../../../common/hooks/useAppDispatch';
+import {getCityCurrentWeather, getCityForecastWeather} from '../weather-actions';
 
 export const Weather = () => {
 
@@ -12,7 +13,8 @@ export const Weather = () => {
     const city = useAppSelector(state => state.weather.city)
 
     const callBackCityHandler = (city: CityType) => {
-        dispatch(setCity({city: city}))
+        dispatch(getCityCurrentWeather({q: city}))
+        dispatch(getCityForecastWeather({q: city, cnt: 24}))
     }
 
     return <div className={styles.weatherComponent}>
