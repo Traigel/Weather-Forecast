@@ -1,8 +1,11 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {ResponseWeatherDataType} from '../../api/types';
+import {getCityCurrentWeather} from './weather-actions';
 
 const initialState = {
     city: 'Minsk' as CityType,
-    cityUrl: ''
+    cityUrl: '',
+    weatherData: {} as ResponseWeatherDataType
 }
 
 const slice = createSlice({
@@ -15,6 +18,12 @@ const slice = createSlice({
         setCityUrl(state, action: PayloadAction<{ cityUrl: string }>) {
             state.cityUrl = action.payload.cityUrl
         },
+    },
+    extraReducers: (builder) => {
+        builder
+            .addCase(getCityCurrentWeather.fulfilled, (state, action) => {
+                state.weatherData = action.payload
+            })
     }
 })
 
