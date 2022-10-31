@@ -4,7 +4,7 @@ import {CitySelector} from './CitySelector/CitySelector';
 import {CityType, setLocation} from '../weather-reducer';
 import {useAppSelector} from '../../../common/hooks/useAppSelector';
 import {useAppDispatch} from '../../../common/hooks/useAppDispatch';
-import {getCityCurrentWeather, getCityForecastWeather} from '../weather-actions';
+import {getCityCurrentWeather} from '../weather-actions';
 import {usePosition} from '../../../common/hooks/usePosition';
 import {Preloader} from '../../../common/components/Preloader/Preloader';
 import {WeatherNow} from '../../../common/components/WeatherNow/WeatherNow';
@@ -30,10 +30,6 @@ export const Weather = () => {
     useEffect(() => {
         if (position.position && !weather.location) {
             dispatch(getCityCurrentWeather({
-                lon: position.position.coords.longitude,
-                lat: position.position.coords.latitude,
-            }))
-            dispatch(getCityForecastWeather({
                 lon: position.position.coords.longitude,
                 lat: position.position.coords.latitude,
                 cnt: 24
