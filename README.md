@@ -1,6 +1,6 @@
 # Weather-Forecast
 
-https://Traihel.github.io/Weather-Forecast
+https://Traigel.github.io/Weather-Forecast
 
 A personal weather assistant to help you prepare for upcoming snowstorms, rain, heat and other severe weather
 conditions.
